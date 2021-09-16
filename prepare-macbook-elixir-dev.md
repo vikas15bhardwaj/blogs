@@ -57,27 +57,28 @@ export PROMPT='%B%F{37}%W %T %~%b$(git_super_status) % # '
 
 - brew install autoconf (Need 2.69 version)
 	
-	```brew uninstall autoconf --ignore-dependencies
-  cd
-    curl -O -L http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
-  tar -xzf autoconf-2.69.tar.gz
-  cdautoconf-2.69
-  ./configure
-  make
-  sudo make install
-  ```
+```
+brew uninstall autoconf --ignore-dependencies
+cd
+curl -O -L http://ftpmirror.gnu.org/autoconf/autoconf-2.69.tar.gz
+tar -xzf autoconf-2.69.tar.gz
+cdautoconf-2.69
+./configure
+make
+sudo make install
+```
 - install other dependencies
-  ```
-	brew install kerl
-  brew install wxmac
-  brew install unixodbc
-  brew install openssl
-  brew install coreutils
-  brew install gpg
-  brew install gawk
-  brew install docker-compose
-	brew install ansible
-  ```
+```
+brew install kerl
+brew install wxmac
+brew install unixodbc
+brew install openssl
+brew install coreutils
+brew install gpg
+brew install gawk
+brew install docker-compose
+brew install ansible
+```
   
 #### Install asdf
 
@@ -85,13 +86,13 @@ Recommended approach is using Git, follow steps here for Zsh
 https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 
 ```	
-	# Clone from git
-	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+# Clone from git
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 ```
 
 ```
-	# Add to ~/.zshrc
-	. $HOME/.asdf/asdf.sh
+# Add to ~/.zshrc
+. $HOME/.asdf/asdf.sh
   
 ```
 Run ```source ~/.zshrc``` to reload terminal. You now can run asdf
@@ -109,32 +110,26 @@ bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-ke
 ```
 
 #### For proxy
+```
 mix hex.config https_proxy ProxyURL
 mix hex.config http_proxy ProxyURL
 npm config setproxy ProxyURL
-
+```
 
 #### Install VSCode Extensions
 ElixirLS
 
+#### Issues
 
 May need to come out of network and set no proxy to install node js to resolve error:
+```
 gpg: keyserver receive failed: No name
 gpg: keyserver receive failed: No name
 gpg: keyserver receive failed: No name
 gpg: keyserver receive failed: No name
 gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-gpg: keyserver receive failed: No name
-
+...
+```
 
 #### Download Docker
 
