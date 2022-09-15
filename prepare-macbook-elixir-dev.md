@@ -11,14 +11,12 @@
 
 - After installing add vscode to shell path using Cmd + Shift + P -> Shell Command - Add to path```
 
+#### Install iTerm2
+Download and Install [iTerm2](https://iterm2.com)
 
-#### Install Zshell
+#### Install oh-my-zsh
 
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-
-#### Install Spaceship theme for zshell
-
-```brew install spaceship```
+```sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
 
 #### Configure Zsh 
 ```code ~/.zshrc```
@@ -37,7 +35,7 @@ export no_proxy=localhost
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Add plugins
-plugins=(git vscode zsh_reload git-prompt)
+plugins=(git vscode git-prompt)
 
 # Add ctrl + back arrow and forward arrow
 
@@ -48,8 +46,6 @@ bindkey "^[^[[C" forward-word
 export PROMPT='%B%F{37}%W %T %~%b$(git_super_status) % # '
 
 ```
-
-#### Install iTerm2
 
 #### Setup for Erlang/Elixir
 
